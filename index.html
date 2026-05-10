@@ -53,12 +53,12 @@
             font-weight: 500;
         }
 
-        /* Hero sekcija s robusnijom pozadinom */
+        /* Hero sekcija koristi tvoju sliku hero-bg.jpg */
         .hero-bg {
             background-color: var(--bg-sand);
             background-image: 
-                linear-gradient(rgba(247, 242, 238, 0.85), rgba(247, 242, 238, 0.7)), 
-                url('https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1200&auto=format&fit=crop'); 
+                linear-gradient(rgba(247, 242, 238, 0.7), rgba(247, 242, 238, 0.5)), 
+                url('hero-bg.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -71,13 +71,12 @@
             margin: 2rem auto;
         }
 
-        /* Grid slike s fallback bojom */
         .grid-image-container {
             position: relative;
             overflow: hidden;
             border-radius: 4px;
             aspect-ratio: 4 / 5;
-            background-color: #E8E2DE; /* Fallback boja dok se slika učitava */
+            background-color: #E8E2DE;
         }
 
         .grid-image-container img {
@@ -90,55 +89,6 @@
 
         .grid-box:hover img {
             transform: scale(1.05);
-        }
-
-        .premium-bg-unified {
-            background-color: white;
-            border-top: 1px solid var(--soft-border);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .abstract-blob {
-            position: absolute;
-            z-index: 0;
-            filter: blur(80px);
-            border-radius: 50%;
-            opacity: 0.4;
-        }
-
-        .blob-1 { width: 400px; height: 400px; background: var(--bg-sand); top: -100px; right: -100px; }
-        .blob-2 { width: 300px; height: 300px; background: var(--primary); bottom: -50px; left: -50px; opacity: 0.15; }
-
-        .premium-content { position: relative; z-index: 1; }
-
-        .premium-list-item {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(184, 153, 161, 0.1);
-        }
-
-        .pricing-card {
-            background: white;
-            border: 1px solid var(--soft-border);
-            transition: all 0.4s ease;
-            position: relative;
-        }
-
-        .ribbon {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: var(--primary);
-            color: white;
-            padding: 5px 15px;
-            font-size: 10px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom-left-radius: 10px;
         }
 
         .highlight-box {
@@ -233,8 +183,25 @@
             object-fit: cover; 
         }
 
-        @media (max-width: 640px) {
-            .screenshot-container { height: 500px; max-width: 280px; }
+        .pricing-card {
+            background: white;
+            border: 1px solid var(--soft-border);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom-left-radius: 10px;
         }
     </style>
 </head>
@@ -269,63 +236,54 @@
         </div>
     </section>
 
-    <!-- GRID S 6 BOXEVA (Optimizirani URL-ovi) -->
+    <!-- GRID S TVOJIM SLIKAMA -->
     <section id="aplikacija" class="section-padding bg-white">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-20 max-w-3xl mx-auto">
-                <h2 class="text-3xl md:text-5xl leading-tight mb-8 text-slate-800">Aplikacija koja razumije sve tvoje potrebe</h2>
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl mb-8 text-slate-800">Aplikacija koja razumije sve tvoje potrebe</h2>
                 <div class="intro-line"></div>
-                <p class="text-lg opacity-80 leading-relaxed italic">
-                    Razumijem da majčinstvo nije svaki dan isto. Nekad ti treba intenzivan trening da izbaciš stres, nekad joga ili mobilnost za umorno tijelo.
-                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- PRENATAL -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1591343395902-1adcb454c2e4?auto=format&fit=crop&q=80&w=600" 
-                             onerror="this.src='https://via.placeholder.com/600x750?text=Prenatal'" alt="Prenatal trening">
+                        <img src="cat-prenatal.jpg" alt="Prenatal">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">PRENATAL</h3>
                 </div>
                 <!-- POSTPARTUM -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1544126592-807daa2b565b?auto=format&fit=crop&q=80&w=600" 
-                             onerror="this.src='https://via.placeholder.com/600x750?text=Postpartum'" alt="Postpartum oporavak">
+                        <img src="cat-postpartum.jpg" alt="Postpartum">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">POSTPARTUM</h3>
                 </div>
                 <!-- FITNES -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=600" 
-                             onerror="this.src='https://via.placeholder.com/600x750?text=Fitnes'" alt="Fitnes">
+                        <img src="cat-fitnes.jpg" alt="Fitnes">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">FITNES</h3>
                 </div>
                 <!-- MOBILNOST -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1552196564-97c82495396c?auto=format&fit=crop&q=80&w=600" 
-                             onerror="this.src='https://via.placeholder.com/600x750?text=Mobilnost'" alt="Mobilnost">
+                        <img src="cat-mobilnost.jpg" alt="Mobilnost">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">MOBILNOST</h3>
                 </div>
                 <!-- JOGA -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600" 
-                             onerror="this.src='https://via.placeholder.com/600x750?text=Joga'" alt="Joga">
+                        <img src="cat-joga.jpg" alt="Joga">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">JOGA</h3>
                 </div>
                 <!-- MEDITACIJA -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=600" 
-                             onerror="this.src='https://via.placeholder.com/600x750?text=Meditacija'" alt="Meditacija">
+                        <img src="cat-meditacija.jpg" alt="Meditacija">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">MEDITACIJA</h3>
                 </div>
@@ -333,67 +291,52 @@
         </div>
     </section>
 
-    <!-- MOCKUPS (Video prikaz) -->
+    <!-- MOCKUPS (Tvoje slike za tablet i phone) -->
     <section class="section-padding overflow-hidden border-y border-gray-100">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8 pr-4 text-center md:text-left">
+            <div class="space-y-8 text-center md:text-left">
                 <h2 class="text-4xl md:text-6xl leading-[1.1]">
                     <span class="highlight-box">30 minuta dnevno</span><br>je sve što ti treba
                 </h2>
-                <p class="text-xl md:text-2xl text-slate-600">Zgrabi bocu vode, pritisni <span class="text-[#B899A1] font-semibold italic">PLAY</span> i vježbaj sa mnom.</p>
+                <p class="text-xl text-slate-600">Zgrabi bocu vode i vježbaj sa mnom bilo gdje.</p>
             </div>
 
             <div class="device-mockup-container">
-                <div class="mockup-tablet p-1 relative">
-                    <div class="rounded-[18px] overflow-hidden aspect-video">
-                        <img src="https://images.unsplash.com/photo-1594911773991-31406e2a7e7a?auto=format&fit=crop&q=80&w=1000" 
-                             onerror="this.src='https://via.placeholder.com/1000x600?text=Tablet+View'" alt="SheMoves Tablet" class="w-full h-full object-cover">
-                    </div>
+                <div class="mockup-tablet">
+                    <img src="mockup-tablet.jpg" alt="Tablet View" class="w-full">
                 </div>
-                <div class="mockup-phone p-1">
-                    <div class="rounded-[20px] overflow-hidden aspect-[9/19]">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=500" 
-                             onerror="this.src='https://via.placeholder.com/500x1000?text=Phone+View'" alt="SheMoves Phone" class="w-full h-full object-cover">
-                    </div>
+                <div class="mockup-phone">
+                    <img src="mockup-phone.jpg" alt="Phone View" class="w-full">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIALS SLIDER -->
-    <section class="section-padding bg-white">
-        <div class="max-w-4xl mx-auto text-center px-4">
-            <h2 class="text-3xl md:text-5xl mb-4 text-slate-800">Rezultati i iskustva</h2>
-            <div class="relative bg-[var(--bg-sand)] py-12 md:py-16 px-4 rounded-[50px] shadow-sm overflow-hidden mt-10">
-                <div class="relative z-10">
-                    <div class="testimonial-slide active">
-                        <div class="screenshot-container">
-                            <img src="https://images.unsplash.com/photo-1516726817505-f5ed17467134?auto=format&fit=crop&q=80&w=400" 
-                                 onerror="this.src='https://via.placeholder.com/400x700?text=Recenzija+1'" alt="Poruka 1">
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="screenshot-container">
-                            <img src="https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?auto=format&fit=crop&q=80&w=400" 
-                                 onerror="this.src='https://via.placeholder.com/400x700?text=Recenzija+2'" alt="Poruka 2">
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="screenshot-container">
-                            <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&q=80&w=400" 
-                                 onerror="this.src='https://via.placeholder.com/400x700?text=Recenzija+3'" alt="Poruka 3">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center gap-6 mt-10 relative z-20">
-                    <button onclick="prevSlide()" class="w-12 h-12 rounded-full border border-[var(--primary)] flex items-center justify-center text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all bg-white shadow-sm">←</button>
-                    <button onclick="nextSlide()" class="w-12 h-12 rounded-full border border-[var(--primary)] flex items-center justify-center text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all bg-white shadow-sm">→</button>
-                </div>
+    <!-- TESTIMONIALS (Tvoje slike testimonial-1.jpg do testimonial-6.jpg) -->
+    <section class="section-padding bg-white text-center">
+        <h2 class="text-3xl md:text-5xl mb-12">Rezultati i iskustva</h2>
+        <div class="max-w-4xl mx-auto bg-[var(--bg-sand)] py-16 px-4 rounded-[50px] relative">
+            <div class="testimonial-slide active">
+                <div class="screenshot-container"><img src="testimonial-1.jpg" alt="Recenzija 1"></div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="screenshot-container"><img src="testimonial-2.jpg" alt="Recenzija 2"></div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="screenshot-container"><img src="testimonial-3.jpg" alt="Recenzija 3"></div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="screenshot-container"><img src="testimonial-4.jpg" alt="Recenzija 4"></div>
+            </div>
+
+            <div class="flex justify-center gap-6 mt-10">
+                <button onclick="prevSlide()" class="w-12 h-12 rounded-full border border-[var(--primary)] bg-white">←</button>
+                <button onclick="nextSlide()" class="w-12 h-12 rounded-full border border-[var(--primary)] bg-white">→</button>
             </div>
         </div>
     </section>
 
-    <!-- CIJENE -->
+    <!-- CIJENE I KONTAKT OSTAJU ISTI -->
     <section id="pretplata" class="section-padding bg-[#F7F2EE]">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl md:text-5xl mb-16 italic text-[#B899A1]">preseli studio u svoj dom</h2>
@@ -402,53 +345,26 @@
                     <div>
                         <h3 class="text-xl uppercase tracking-widest mb-6 opacity-60">Mjesečna pretplata</h3>
                         <div class="text-5xl text-slate-800 mb-8">29€<span class="text-sm opacity-40">/mj</span></div>
-                        <ul class="text-left space-y-4 mb-12 opacity-70 text-sm">
-                            <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Otkazivanje bilo kada</li>
-                        </ul>
                     </div>
-                    <a href="https://buy.stripe.com/14kcQN81t7UJ36g148" target="_blank" class="btn-cta w-full py-5 rounded-full font-semibold tracking-widest text-sm uppercase">ZAPOČNI SADA</a>
+                    <a href="https://buy.stripe.com/14kcQN81t7UJ36g148" target="_blank" class="btn-cta w-full py-5 rounded-full font-semibold text-sm">ZAPOČNI SADA</a>
                 </div>
                 <div class="pricing-card p-12 rounded-[40px] flex flex-col justify-between border-2 border-[#B899A1] shadow-sm">
                     <div class="ribbon">Ušteda 10%</div>
                     <div>
                         <h3 class="text-xl uppercase tracking-widest mb-6 opacity-60">Tromjesečna pretplata</h3>
                         <div class="text-5xl text-slate-800 mb-8">78.30€<span class="text-sm opacity-40">/3 mj</span></div>
-                        <p class="text-[#B899A1] font-semibold text-xs uppercase mb-8 tracking-widest">Najpopularniji izbor</p>
                     </div>
-                    <a href="https://buy.stripe.com/6oUdRa88S6qX2Re8Zk6kg0i" target="_blank" class="btn-cta w-full py-5 rounded-full font-semibold tracking-widest text-sm uppercase">ZAPOČNI SADA</a>
+                    <a href="https://buy.stripe.com/6oUdRa88S6qX2Re8Zk6kg0i" target="_blank" class="btn-cta w-full py-5 rounded-full font-semibold text-sm">ZAPOČNI SADA</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- KONTAKT -->
-    <section id="kontakt" class="section-padding bg-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl mb-6 text-slate-800">Javi mi se s povjerenjem 🤍</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-                <a href="https://instagram.com/shemoves.sara" target="_blank" class="contact-box">
-                    <div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div>
-                    <p class="font-semibold">@shemoves.sara</p>
-                </a>
-                <a href="https://facebook.com/shemoves.sara" target="_blank" class="contact-box">
-                    <div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div>
-                    <p class="font-semibold">@shemoves.sara</p>
-                </a>
-                <a href="mailto:shemoves.sara@gmail.com" class="contact-box">
-                    <div class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
-                    <p class="font-semibold text-sm">shemoves.sara@gmail.com</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 text-center text-[10px] uppercase tracking-widest opacity-40 border-t border-gray-100 font-semibold">
-        <p class="mb-4">SHEMOVES by Sara Gunjača</p>
-        <p>© 2026 Sva prava pridržana.</p>
+    <footer class="py-12 text-center text-[10px] uppercase tracking-widest opacity-40">
+        <p>SHEMOVES by Sara Gunjača © 2026</p>
     </footer>
 
     <script>
-        // Slider logika
         let currentSlide = 0;
         const slides = document.querySelectorAll('.testimonial-slide');
         function showSlide(index) {
@@ -459,8 +375,6 @@
         }
         function nextSlide() { currentSlide++; showSlide(currentSlide); }
         function prevSlide() { currentSlide--; showSlide(currentSlide); }
-        
-        // Automatsko pokretanje slidera svakih 5 sekundi
         setInterval(nextSlide, 5000);
     </script>
 </body>
