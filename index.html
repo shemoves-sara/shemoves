@@ -251,6 +251,39 @@
             justify-content: center;
             margin-bottom: 1rem;
         }
+
+        /* Testimonials Styles */
+        .testimonial-slider-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE/Edge */
+            scroll-snap-type: x mandatory;
+        }
+        
+        .testimonial-slider-container::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        .testimonial-card {
+            min-width: 280px;
+            width: 320px;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--soft-border);
+            scroll-snap-align: center;
+        }
+
+        .testimonial-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Sprječava rastezanje i rezanje teksta unutar slike */
+        }
     </style>
 </head>
 <body>
@@ -284,7 +317,7 @@
         </div>
     </section>
 
-    <!-- GRID S 6 BOXEVA -->
+    <!-- GRID S 6 BOXEVA (Bijela pozadina) -->
     <section id="aplikacija" class="section-padding bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-20 max-w-3xl mx-auto">
@@ -299,42 +332,36 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- PRENATAL -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
                         <img src="cat-prenatal.jpg" alt="Prenatal trening" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">PRENATAL</h3>
                 </div>
-                <!-- POSTPARTUM -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
                         <img src="cat-postpartum.jpg" alt="Postpartum oporavak" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">POSTPARTUM</h3>
                 </div>
-                <!-- FITNES -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
                         <img src="cat-fitnes.jpg" alt="Fitnes" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">FITNES</h3>
                 </div>
-                <!-- MOBILNOST -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
                         <img src="cat-mobilnost.jpg" alt="Mobilnost" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">MOBILNOST</h3>
                 </div>
-                <!-- JOGA -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
                         <img src="cat-joga.jpg" alt="Joga" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">JOGA</h3>
                 </div>
-                <!-- MEDITACIJA -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
                         <img src="cat-meditacija.jpg" alt="Meditacija" onerror="this.style.display='none'">
@@ -345,8 +372,8 @@
         </div>
     </section>
 
-    <!-- MOCKUPS -->
-    <section class="section-padding mockup-bg overflow-hidden border-y border-gray-100">
+    <!-- MOCKUPS (Boja pijeska) -->
+    <section class="section-padding bg-[#F7F2EE] overflow-hidden border-y border-gray-100">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-8 pr-4">
                 <h2 class="text-4xl md:text-6xl leading-[1.1]">
@@ -375,9 +402,8 @@
         </div>
     </section>
 
-    <!-- PREMIUM OBUHVATA -->
-    <section class="section-padding premium-bg-unified">
-        <!-- Apstraktni oblici -->
+    <!-- PREMIUM OBUHVATA (Bijela pozadina) -->
+    <section class="section-padding premium-bg-unified bg-white">
         <div class="abstract-blob blob-1"></div>
         <div class="abstract-blob blob-2"></div>
 
@@ -403,8 +429,34 @@
         </div>
     </section>
 
-    <!-- ZAVRŠNA SEKCIJA SA CIJENAMA -->
-    <section id="pretplata" class="section-padding bg-[#F7F2EE]">
+    <!-- TESTIMONIALS SLIDER (Boja pijeska) -->
+    <section class="section-padding bg-[#F7F2EE]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl mb-12 text-slate-800 italic">Iskustva polaznica</h2>
+            
+            <div class="testimonial-slider-container">
+                <div class="testimonial-card">
+                    <img src="testim1.jpg" alt="Dojam 1" onerror="this.src='https://placehold.co/600x600/white/B899A1?text=Iskustvo+1'">
+                </div>
+                <div class="testimonial-card">
+                    <img src="testim2.jpg" alt="Dojam 2" onerror="this.src='https://placehold.co/600x600/white/B899A1?text=Iskustvo+2'">
+                </div>
+                <div class="testimonial-card">
+                    <img src="testim3.jpg" alt="Dojam 3" onerror="this.src='https://placehold.co/600x600/white/B899A1?text=Iskustvo+3'">
+                </div>
+                <div class="testimonial-card">
+                    <img src="testim4.jpg" alt="Dojam 4" onerror="this.src='https://placehold.co/600x600/white/B899A1?text=Iskustvo+4'">
+                </div>
+                <div class="testimonial-card">
+                    <img src="testim5.jpg" alt="Dojam 5" onerror="this.src='https://placehold.co/600x600/white/B899A1?text=Iskustvo+5'">
+                </div>
+            </div>
+            <p class="mt-4 text-[10px] uppercase tracking-widest opacity-40">Povuci za više →</p>
+        </div>
+    </section>
+
+    <!-- ZAVRŠNA SEKCIJA SA CIJENAMA (Bijela pozadina) -->
+    <section id="pretplata" class="section-padding bg-white">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-2xl md:text-4xl mb-3 text-slate-800">Otključaj kompletan sadržaj aplikacije i</h2>
             <h2 class="text-3xl md:text-5xl mb-16 italic text-[#B899A1]">preseli studio u svoj dom</h2>
@@ -439,8 +491,8 @@
         </div>
     </section>
 
-    <!-- KONTAKT SEKCIJA -->
-    <section id="kontakt" class="section-padding bg-white">
+    <!-- KONTAKT SEKCIJA (Boja pijeska) -->
+    <section id="kontakt" class="section-padding bg-[#F7F2EE]">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl md:text-5xl mb-6 text-slate-800">Javi mi se s povjerenjem 🤍</h2>
             <p class="mb-16 opacity-80 text-lg max-w-2xl mx-auto leading-relaxed">Tu sam da ti pomognem u tvom procesu transformacije. Javi mi se putem bilo kojeg kanala ispod.</p>
@@ -474,7 +526,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 text-center text-[10px] uppercase tracking-widest opacity-40 border-t border-gray-100 font-semibold">
+    <footer class="py-12 text-center text-[10px] uppercase tracking-widest opacity-40 border-t border-gray-100 font-semibold bg-white">
         <p class="mb-4">SHEMOVES by Sara Gunjača</p>
         <p>© 2026 Sva prava pridržana.</p>
     </footer>
