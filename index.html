@@ -74,7 +74,10 @@
             overflow: hidden;
             border-radius: 4px;
             aspect-ratio: 4 / 3;
-            background-color: #eee;
+            background-color: #E5D1D6; /* Nježna roza kao fallback boja */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .grid-image-container img {
@@ -82,6 +85,18 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
+        }
+
+        /* Ikona koja se vidi ako slika fali */
+        .grid-image-container::before {
+            content: "SheMoves";
+            position: absolute;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: white;
+            opacity: 0.5;
+            z-index: 0;
         }
 
         .grid-box:hover img {
@@ -284,39 +299,45 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- PRENATAL -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="cat-prenatal.jpg" alt="Prenatal trening">
+                        <img src="cat-prenatal.jpg" alt="Prenatal trening" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">PRENATAL</h3>
                 </div>
+                <!-- POSTPARTUM -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="cat-postpartum.jpg" alt="Postpartum oporavak">
+                        <img src="cat-postpartum.jpg" alt="Postpartum oporavak" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">POSTPARTUM</h3>
                 </div>
+                <!-- FITNES -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="cat-fitnes.jpg" alt="Fitnes">
+                        <img src="cat-fitnes.jpg" alt="Fitnes" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">FITNES</h3>
                 </div>
+                <!-- MOBILNOST -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="cat-mobilnost.jpg" alt="Mobilnost">
+                        <img src="cat-mobilnost.jpg" alt="Mobilnost" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">MOBILNOST</h3>
                 </div>
+                <!-- JOGA -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="cat-joga.jpg" alt="Joga">
+                        <img src="cat-joga.jpg" alt="Joga" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">JOGA</h3>
                 </div>
+                <!-- MEDITACIJA -->
                 <div class="grid-box text-center">
                     <div class="grid-image-container mb-4 shadow-sm">
-                        <img src="cat-meditacija.jpg" alt="Meditacija">
+                        <img src="cat-meditacija.jpg" alt="Meditacija" onerror="this.style.display='none'">
                     </div>
                     <h3 class="uppercase tracking-widest text-sm opacity-70">MEDITACIJA</h3>
                 </div>
