@@ -573,53 +573,99 @@
     <!-- JA SAM SARA -->
     <section class="section-padding" style="background-color: var(--bg-sand);">
         <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
 
-                <!-- Foto -->
-                <div style="
-                    aspect-ratio: 3/4;
-                    background: linear-gradient(160deg, #ede8e3 0%, rgba(184,153,161,0.15) 100%);
-                    border-radius: 40px;
-                    overflow: hidden;
-                ">
-                    <img src="ja_sam_sara.jpg" alt="Sara Gunjača" style="width:100%; height:100%; object-fit:cover; object-position: center top;">
-                </div>
+            <p class="text-[10px] font-bold uppercase tracking-[0.25em] opacity-40 mb-10 text-center md:text-left" style="letter-spacing: 0.25em;">Movement LAB &middot; Rijeka</p>
 
-                <!-- Tekst -->
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="uppercase tracking-[0.3em] text-xs mb-4 text-[#B899A1] font-semibold">Upoznaj me</h4>
-                        <h2 class="text-4xl md:text-6xl mb-2 leading-tight text-slate-800">Ja sam Sara.</h2>
-                        <div class="intro-line" style="margin: 1.5rem 0;"></div>
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+
+                <!-- Lijeva kolona: foto + stats + citat -->
+                <div class="flex flex-col gap-8">
+
+                    <!-- Fotografija -->
+                    <div style="
+                        position: relative;
+                        width: 100%;
+                        aspect-ratio: 4/5;
+                        overflow: hidden;
+                        border-radius: 4px;
+                        border: 1px solid rgba(184,153,161,0.15);
+                        box-shadow: 0 8px 40px rgba(184,153,161,0.12);
+                    ">
+                        <img src="ja_sam_sara.jpg" alt="Sara Gunjača" style="width:100%; height:100%; object-fit:cover; object-position: center top; transition: transform 0.7s ease;">
+                        <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top, rgba(247,242,238,0.5), transparent);pointer-events:none;"></div>
+                        <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(to right, transparent, #B899A1, transparent);"></div>
                     </div>
 
-                    <p class="text-lg leading-relaxed opacity-80">
-                        Bok, ja sam Sara. Iza mene ne stoje samo certifikati, nego i stvaran život. Supruga sam i mama dvoje djece, što znači da itekako dobro znam kako izgleda balansiranje između obitelji, posla i pronalaska onih dragocjenih 30 minuta za sebe.
+                    <!-- Stats -->
+                    <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(184,153,161,0.15);border-radius:4px;overflow:hidden;">
+                        <div style="padding:1.25rem;text-align:center;background:white;">
+                            <p style="font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:300;color:#B899A1;letter-spacing:-0.02em;margin-bottom:0.25rem;">130+</p>
+                            <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.15em;color:#9CA3AF;font-weight:600;line-height:1.6;">žena kroz online program<br>u dvije godine SHEMOVES-a</p>
+                        </div>
+                        <div style="padding:1.25rem;text-align:center;background:white;border-left:1px solid rgba(184,153,161,0.15);">
+                            <p style="font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:300;color:#B899A1;letter-spacing:-0.02em;margin-bottom:0.25rem;">60+</p>
+                            <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.15em;color:#9CA3AF;font-weight:600;line-height:1.6;">žena kroz program uživo<br>u prvoj godini LAB-a</p>
+                        </div>
+                    </div>
+
+                    <!-- Citat -->
+                    <div style="border-left:2px solid #B899A1;padding:0.25rem 0 0.25rem 1.5rem;">
+                        <p class="text-sm leading-relaxed italic opacity-60">
+                            &ldquo;Gledati ženu koja ponovno vjeruje svom tijelu i svom dahu &mdash; za mene nema cijenu.&rdquo;
+                        </p>
+                        <p style="font-size:9px;color:#B899A1;text-transform:uppercase;letter-spacing:0.2em;font-weight:700;margin-top:0.75rem;">— Sara, SheMoves</p>
+                    </div>
+
+                </div>
+
+                <!-- Desna kolona: tekst -->
+                <div>
+                    <h4 class="uppercase tracking-[0.3em] text-xs mb-4 text-[#B899A1] font-semibold">Upoznaj me</h4>
+                    <h2 class="text-4xl md:text-5xl mb-8 leading-tight text-slate-800" style="font-weight:300;">Ja sam Sara.</h2>
+
+                    <p class="leading-relaxed mb-6" style="opacity:0.75;font-size:0.95rem;line-height:1.8;">
+                        Supruga sam i mama dvoje djece — i upravo to je moja najveća motivacija. Znam kako izgleda balansiranje između obitelji, posla i pronalaska onih dragocjenih 30 minuta za sebe. Jer i sama to živim svaki dan.
                     </p>
 
-                    <p class="leading-relaxed opacity-70">
-                        Kao <span class="font-semibold text-slate-700">PCES prenatal i postpartum specijalistica</span>, instruktorica fitnessa, joge i pilatesa te nutricionistica, svoj sam život posvetila proučavanju ženskog tijela, biomehanike i pokreta. Suosnivačica sam i glavna trenerica u <span class="font-semibold text-slate-700">Movement Lab dvorani u Rijeci</span>, gdje svakodnevno vodim grupne i individualne treninge te radim specifičnu dijagnostiku za žene.
+                    <p class="leading-relaxed mb-6" style="opacity:0.7;font-size:0.95rem;line-height:1.8;">
+                        Kao <span class="font-semibold text-slate-700">PCES prenatal i postpartum specijalistica</span>, instruktorica fitnessa, joge i pilatesa te nutricionistica, svoj sam život posvetila proučavanju ženskog tijela, biomehanike i pokreta. Suosnivačica sam i glavna trenerica u <span class="font-semibold text-slate-700">Movement Lab dvorani u Rijeci</span>, gdje svakodnevno vodim grupne i individualne treninge te provodim specifičnu dijagnostiku za žene.
                     </p>
 
-                    <p class="leading-relaxed opacity-70">
-                        Moja misija je jednostavna: pomoći ti da se ponovno osjećaš sigurno, snažno i moćno u svom tijelu – bez obzira na to jesi li trudna, nedavno rodila ili si godinama daleko od poroda, ali i dalje osjećaš posljedice (poput dijastaze ili oslabljenog zdjeličnog dna). Kroz moj rad prošle su <span class="font-semibold text-slate-700">stotine žena</span> koje su, umjesto frustracije, ponovno pronašle vlastitu snagu.
+                    <p class="leading-relaxed mb-10" style="opacity:0.7;font-size:0.95rem;line-height:1.8;">
+                        Moja misija je jednostavna: pomoći ti da se ponovno osjećaš sigurno, snažno i moćno u svom tijelu — bez obzira na to jesi li trudna, nedavno rodila ili si godinama daleko od poroda, ali i dalje osjećaš posljedice (poput dijastaze ili oslabljenog zdjeličnog dna). Kroz moj rad prošle su <span class="font-semibold text-slate-700">stotine žena</span> koje su, umjesto frustracije, ponovno pronašle vlastitu snagu.
                     </p>
 
-                    <div style="
-                        background: white;
-                        border-left: 3px solid #B899A1;
-                        border-radius: 0 16px 16px 0;
-                        padding: 1.1rem 1.4rem;
-                        box-shadow: 0 2px 12px rgba(184,153,161,0.08);
-                    ">
-                        <p class="leading-relaxed opacity-70 text-sm italic">
-                            A ako se vratimo malo unatrag... u nekom "prošlom životu" davne 2016., bila sam i <span class="font-semibold not-italic text-slate-700">viceprvakinja Hrvatske u pole danceu</span>. Pokret je jednostavno oduvijek bio moj jezik.
+                    <!-- Certifikati -->
+                    <div style="border-top:1px solid rgba(184,153,161,0.15);padding-top:2rem;">
+                        <p style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:#9CA3AF;margin-bottom:1.25rem;">Certifikati i edukacije</p>
+                        <ul style="display:flex;flex-direction:column;gap:0.75rem;">
+                            <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.8rem;color:#6B7280;line-height:1.6;">
+                                <span style="width:5px;height:5px;border-radius:50%;background:#B899A1;margin-top:0.45rem;flex-shrink:0;"></span>
+                                <span><span class="font-semibold text-slate-700">PCES</span> Pre & Postnatal Corrective Exercise Specialist</span>
+                            </li>
+                            <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.8rem;color:#6B7280;line-height:1.6;">
+                                <span style="width:5px;height:5px;border-radius:50%;background:#B899A1;margin-top:0.45rem;flex-shrink:0;"></span>
+                                <span><span class="font-semibold text-slate-700">Instruktorica funkcionalnog fitnessa</span></span>
+                            </li>
+                            <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.8rem;color:#6B7280;line-height:1.6;">
+                                <span style="width:5px;height:5px;border-radius:50%;background:#B899A1;margin-top:0.45rem;flex-shrink:0;"></span>
+                                <span><span class="font-semibold text-slate-700">Instruktorica joge i pilatesa</span></span>
+                            </li>
+                            <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:0.8rem;color:#6B7280;line-height:1.6;">
+                                <span style="width:5px;height:5px;border-radius:50%;background:#B899A1;margin-top:0.45rem;flex-shrink:0;"></span>
+                                <span><span class="font-semibold text-slate-700">Nutricionistica</span></span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Fun fact -->
+                    <div style="margin-top:2rem;background:white;border-left:2px solid rgba(184,153,161,0.4);border-radius:0 12px 12px 0;padding:1rem 1.25rem;box-shadow:0 2px 12px rgba(184,153,161,0.06);">
+                        <p class="text-sm leading-relaxed italic" style="opacity:0.6;">
+                            A ako se vratimo malo unatrag... davne 2016. bila sam <span class="font-semibold not-italic text-slate-700">viceprvakinja Hrvatske u pole danceu</span>. Pokret je jednostavno oduvijek bio moj jezik.
                         </p>
                     </div>
 
-                    <p class="leading-relaxed opacity-70">
-                        Obožavam svoj posao jer gledati ženu koja ponovno vjeruje svom tijelu i svom dahu – za mene nema cijenu. Tu sam da te vodim kroz tvoj proces, sigurno i korak po korak.
-                    </p>
                 </div>
             </div>
         </div>
